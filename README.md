@@ -18,3 +18,7 @@ put ng-app tag on html tag in index file , ng is a directive
 ^^ stores the input to the model of "favMeat" and can be called with {{favMeat}}
 
 This is called 2 way data binding
+
+I learned you can make custom directives, I will make a kerf tag that does some weird stuff
+
+ni-init can give us some data that we can access in the same way as the message model
