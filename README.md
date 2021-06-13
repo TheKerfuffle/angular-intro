@@ -21,4 +21,6 @@ This is called 2 way data binding
 
 I learned you can make custom directives, I will make a kerf tag that does some weird stuff
 
-ni-init can give us some data that we can access in the same way as the message model
+ng-init can allow us to initialize some data that we can access in the same way as the message model
+
+we can also create a css style that lives in style.css and can be accessed through ng-init
