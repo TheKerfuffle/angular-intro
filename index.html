@@ -7,22 +7,39 @@
     <title>Angulur Intro</title>
     <link rel="stylesheet" href="/content/css/style.css">
     <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/app/app.js"></script>
 </head>
-<!-- ng-init initializes data for the parts of a tag to use -->
-<body ng-init="color='orange'">
+
+<body>
 
     <!-- ng-model allows us to store a variable and access it -->
-    <input type="text" ng-model="message" placeholder="write a welcome message">
-    <p>Welcome Message: {{message}}</p>
+    <input type="text" ng-model="welcome" placeholder="write a welcome message">
+    <p>Welcome Message: {{welcome}}</p>
 
-    <p class="{{color}}">Hello my friends</p>
+    <!-- ng-init initializes data for the parts of a tag to use -->
+    <div ng-init="color='orange'">
+        <p class="{{color}}">Hello my friends</p>
+    </div>
 
 
-    <!-- ng-repeat tag, like map in react -->
-    <div ng-init="arrows=['bodkin', 'bolt', 'needle']">
+
+    <!-- ng-repeat tag, like map in react removed to use scope from app.js -->
+    <!-- Comment out the top div tag and re comment the init tag in order to use init vs the scope  -->
+    <div>
+        <!-- <div ng-init="arrows=['bodkin', 'bolt', 'needle']"> -->
         <ul>
             <li ng-repeat="arrow in arrows">{{arrow}}</li>
         </ul>
+    </div>
+
+    <!-- In order to use the scopes from app.js, needs to be within the controller div! -->
+    <div ng-controller="ArrowController">
+        <p>{{message}}</p>
+
+        <ul>
+            <li ng-repeat="arrow in arrows">{{arrow}}</li>
+        </ul>
+        
     </div>
 </body>
 </html>
