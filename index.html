@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="myArrowApp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="/content/css/style.css">
     <script src="/node_modules/angular/angular.min.js"></script>
 </head>
+<!-- ng-init initializes data for the parts of a tag to use -->
 <body ng-init="color='orange'">
+
+    <!-- ng-model allows us to store a variable and access it -->
     <input type="text" ng-model="message" placeholder="write a welcome message">
     <p>Welcome Message: {{message}}</p>
 
     <p class="{{color}}">Hello my friends</p>
 
-    
+
+    <!-- ng-repeat tag, like map in react -->
+    <div ng-init="arrows=['bodkin', 'bolt', 'needle']">
+        <ul>
+            <li ng-repeat="arrow in arrows">{{arrow}}</li>
+        </ul>
+    </div>
 </body>
 </html>

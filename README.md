@@ -24,3 +24,8 @@ I learned you can make custom directives, I will make a kerf tag that does some 
 ng-init can allow us to initialize some data that we can access in the same way as the message model
 
 we can also create a css style that lives in style.css and can be accessed through ng-init
+
+ng-repeat acts much the same way as .map in react
+
+modules allow us to structure our code into logical chunks - see myArrowApp
+
