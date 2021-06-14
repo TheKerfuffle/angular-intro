@@ -11,10 +11,10 @@ myArrowApp.run(() => {
 
 })
 
-myArrowApp.controller('ArrowController', ($scope) => {
+myArrowApp.controller('ArrowController', ['$scope', ($scope) => {
 
 $scope.message = 'I took an arrow in the knee';
 
 $scope.arrows = ['bodkin', 'bolt', 'needle'];
 
-})
+}])
